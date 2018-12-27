@@ -36,7 +36,7 @@
   -->
 
 
-  <plugin name="com-socketmobile-scanapi" source="npm" />
+  <!--<plugin name="socketmobile-scanapi-cordova" source="npm" />-->
  
   
   <!--<feature name="http://api.phonegap.com/1.0/camera"/>
