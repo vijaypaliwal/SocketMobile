@@ -20,7 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-        SocketScanApi.useScanApi('', scanApiNotification);
+        
     },
 
     // deviceready Event Handler
@@ -29,6 +29,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        SocketScanApi.useScanApi('', scanApiNotification);
     },
 
     // Update DOM on a Received Event
