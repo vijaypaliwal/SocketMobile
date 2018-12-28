@@ -29,14 +29,13 @@
   <gap:plugin name="org.apache.cordova.vibration"/>
   <gap:plugin name="ionic-plugin-keyboard"  source="npm" version="1.0.7" />
   <gap:plugin name="org.apache.cordova.splashscreen" />
-
   <gap:plugin name="net.bgta.phonegap.plugin.appversion" source="pgb"/>
   <plugin name="org.apache.cordova.network-information" source="npm"/>
   <plugin name="org.apache.cordova.splashscreen" source="npm"/>
   -->
 
 
-  <plugin name="socketmobile-scanapi-cordova" source="npm" />
+  <plugin name="lineapro-phonegap-plugin" source="npm" />
  
   
   <!--<feature name="http://api.phonegap.com/1.0/camera"/>
