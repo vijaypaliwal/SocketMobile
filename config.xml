@@ -35,7 +35,7 @@
   -->
 
 
-  <plugin name="lineapro-phonegap-plugin" source="npm" />
+  <plugin name="cordova-lineapro-plugin" source="npm" />
  
   
   <!--<feature name="http://api.phonegap.com/1.0/camera"/>
