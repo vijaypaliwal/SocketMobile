@@ -1,0 +1,57 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"ScanApiCordova\"><param name=\"ios-package\" value=\"ScanApiCordova\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*-Info.plist": {
+        "parents": {
+          "UISupportedExternalAccessoryProtocols": [
+            {
+              "xml": "<key>UISupportedExternalAccessoryProtocols</key>",
+              "count": 1
+            },
+            {
+              "xml": "<array><string>com.socketmobile.chs</string></array>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.SHIVAMITCS.SocketMobile"
+    },
+    "com-socketmobile-scanapi-cordova": {
+      "PACKAGE_NAME": "com.SHIVAMITCS.SocketMobile"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "com-socketmobile-scanapi-cordova.ScanApiCordova",
+      "file": "plugins/com-socketmobile-scanapi-cordova/www/ScanApiCordova.js",
+      "pluginId": "com-socketmobile-scanapi-cordova",
+      "clobbers": [
+        "SocketScanApi"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.3",
+    "com-socketmobile-scanapi-cordova": "0.1.0"
+  }
+}
