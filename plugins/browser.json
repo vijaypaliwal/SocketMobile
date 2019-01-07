@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com-socketmobile-scanapi-cordova": {
+            "PACKAGE_NAME": "com.SHIVAMITCS.SocketMobile"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.SHIVAMITCS.SocketMobile"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -20,14 +20,35 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        
     },
+    scanApiNotification:function(event)
+    {
+        alert("Data Scanned!");
+            event = JSON.parse(event);
+            if (event.type) {
+                alert('receive an event: ' + event.type);
+                document.getElementById('eventRec')[0].innerHTML = 'receive an event: ' + event.type;;
 
+                if (event.type === 'decodedData') {
+                    document.getElementById('eventData')[0].innerHTML = event.decodedData.join(" and ");;
+                    // let decodedData = event.decodedData.map(c => String.fromCharCode(c)).join('');
+                    alert('decodedData: ', decodedData);
+                }
+            }
+        
+    },
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
+    onDeviceReady: function () {
+    
+        SocketScanApi.useScanApi('', 'scanApiNotification');
         this.receivedEvent('deviceready');
+
+        
+      
     },
 
     // Update DOM on a Received Event
@@ -40,7 +61,8 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+   
 };
 
 app.initialize();

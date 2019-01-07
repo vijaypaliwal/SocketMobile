@@ -1,5 +1,5 @@
 
-alert("No");
+ 
 
 var exec = require('cordova/exec');
 
