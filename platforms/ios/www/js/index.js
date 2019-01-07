@@ -25,14 +25,14 @@ var app = {
     },
     scanApiNotification:function(event)
     {
-        alert("Data Scanned!");
+       
             event = JSON.parse(event);
             if (event.type) {
                 alert('receive an event: ' + event.type);
-                document.getElementById('eventRec')[0].innerHTML = 'receive an event: ' + event.type;;
+                document.getElementById('eventRec').innerHTML = 'receive an event: ' + event.type;
 
                 if (event.type === 'decodedData') {
-                    document.getElementById('eventData')[0].innerHTML = event.decodedData.join(" and ");;
+                    document.getElementById('eventData').innerHTML = event.decodedData.join(" and ");;
                     // let decodedData = event.decodedData.map(c => String.fromCharCode(c)).join('');
                     alert('decodedData: ', decodedData);
                 }
