@@ -18,7 +18,8 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
+       
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
         
     },
@@ -44,7 +45,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function () {
     
-        SocketScanApi.useScanApi('', 'scanApiNotification');
+        SocketScanApi.useScanApi('', this.scanApiNotification.bind(event));
         this.receivedEvent('deviceready');
 
         
