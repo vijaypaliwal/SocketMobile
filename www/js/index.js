@@ -30,11 +30,12 @@ var app = {
             if (event.type) {
                 alert('receive an event: ' + event.type);
                 document.getElementById('eventRec').innerHTML = 'receive an event: ' + event.type;
-
+               // document.getElementById('eventRec').setAttribute("class", "blink");
                 if (event.type === 'decodedData') {
+                    alert('decodedData: ', event.decodedData);
                     document.getElementById('eventData').innerHTML = event.decodedData.join(" and ");;
                     // let decodedData = event.decodedData.map(c => String.fromCharCode(c)).join('');
-                    alert('decodedData: ', decodedData);
+                    
                 }
             }
         
