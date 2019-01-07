@@ -49,6 +49,36 @@
 
         </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/ScanApiCordova.js"></script>
+
+        <script>
+
+            function scanApiNotification(event) {
+                
+
+                try {
+                    event = JSON.parse(event);
+                    if (event.type) {
+                        alert('receive an event: ' + event.type);
+                        document.getElementById('eventRec')[0].innerHTML = 'receive an event: ' + event.type;;
+
+                        if (event.type === 'decodedData') {
+                            document.getElementById('eventData')[0].innerHTML = event.decodedData.join(" and ");;
+                            // let decodedData = event.decodedData.map(c => String.fromCharCode(c)).join('');
+                            alert('decodedData: ', decodedData);
+                        }
+                    }
+                } catch (e) {
+                    alert('event received: ', event);
+                }
+
+            }
+
+
+        </script>
+
         <script type="text/javascript" src="js/index.js"></script>
+
+        
     </body>
 </html>
