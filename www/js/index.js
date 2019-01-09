@@ -33,7 +33,8 @@ var app = {
                // document.getElementById('eventRec').setAttribute("class", "blink");
                 if (event.type === 'decodedData') {
                     alert('decodedData: ', event.decodedData);
-                    document.getElementById('eventData').innerHTML = event.decodedData.join(" and ");;
+                    document.getElementById('eventData').innerHTML = String.fromCharCode(event.decodedData.join(","));
+                  
                     // let decodedData = event.decodedData.map(c => String.fromCharCode(c)).join('');
                     
                 }
