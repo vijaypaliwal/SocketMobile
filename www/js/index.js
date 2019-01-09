@@ -33,8 +33,14 @@ var app = {
                // document.getElementById('eventRec').setAttribute("class", "blink");
                 if (event.type === 'decodedData') {
                     alert('decodedData: ', event.decodedData);
-                    document.getElementById('eventData').innerHTML = String.fromCharCode(event.decodedData.join(","));
-                  
+                  //  document.getElementById('eventData').innerHTML = event.decodedData.join(",");
+                    var scannedV = '';
+                    for (var i = 0; i < event.decodedData.length; i++) {
+                        scannedV = scannedV + String.fromCharCode(event.decodedData[i]); + '';
+                    }
+                    document.getElementById('eventData').innerHTML = scannedV;
+
+                     
                     // let decodedData = event.decodedData.map(c => String.fromCharCode(c)).join('');
                     
                 }
